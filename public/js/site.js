@@ -433,4 +433,15 @@ $(document).ready(function(){
 	if (list === 'yes') {
 		$('.btn-list').trigger('click');
 	}
+
+    //Mark-Unmark all rules
+    function markUnmarkRules(checkOption) {
+        $('.list-unstyled input[type="checkbox"]').prop('checked', checkOption);
+    }
+    $('#unmarkAllBtn').on('click', function () {
+        markUnmarkRules(false);
+    });
+    $('#markAllBtn').on('click', function () {
+        markUnmarkRules(true);
+    });
 });

@@ -17,7 +17,7 @@
 const presentTask = require('../../view/presenter/task');
 const getStandards = require('../../data/standards');
 const httpHeaders = require('http-headers');
-console.log("Test");
+
 module.exports = function edit(app) {
 	app.express.get('/:id/edit', (request, response, next) => {
 		app.webservice.task(request.params.id).get({}, (error, task) => {
